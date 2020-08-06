@@ -10,16 +10,20 @@ Tests for `testpackage` module.
 
 import unittest
 
-import testpackage
-
+#import testpackage
 
 class TestTestpackage(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.hello_message = "Hello There"
 
     def test_something(self):
         assert(testpackage.__version__)
 
     def tearDown(self):
         pass
+
+
+    def test_prints(self):
+        output = testpackage.hello()
+        #assert(1==1)
